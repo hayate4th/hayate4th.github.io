@@ -6,7 +6,7 @@ module.exports = {
     index: "./src/index.tsx"
   },
   output: {
-    path: path.resolve(__dirname, "docs"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
   module: {
@@ -21,6 +21,6 @@ module.exports = {
     extensions: [".js", ".ts", ".tsx"]
   },
   devServer: {
-    contentBase: "./docs"
+    contentBase: "./dist"
   }
 }
