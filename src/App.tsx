@@ -1,11 +1,12 @@
 import React from "react";
 
 import MusicBlock from "./components/MusicBlock";
+import MusicColumn from "./components/MusicColumn";
 
 const App = () => {
   return (
     <>
-      <MusicBlock color="blue" />
+      <MusicColumn length={9} color="blue" />
     </>
   );
 };
