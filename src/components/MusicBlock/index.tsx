@@ -16,6 +16,7 @@ const MusicBlock: React.FC<MusicBlockProps> = ({ color }) => {
 const Block = styled.div`
   width: 25px;
   height: 25px;
+  border-radius: 5px;
   background-color: ${(props) =>
     getBackgroundColorFromClassName(props.className!)};
 `;
