@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Colors } from "../../colors";
 import MusicBlock from "../MusicBlock";
 
-type MusicColumnProps = {
+export type Props = {
   length: number;
-  color: Colors;
+  color: number;
 };
 
-const MusicColumn: React.FC<MusicColumnProps> = ({ length, color }) => {
+const MusicColumn: React.FC<Props> = ({ length, color }) => {
   const range = Array.from({ length }, (v, k) => k);
   return (
     <Column>
@@ -21,6 +20,8 @@ const MusicColumn: React.FC<MusicColumnProps> = ({ length, color }) => {
 };
 
 const Column = styled.div`
+  align-self: flex-end;
+
   div {
     margin-bottom: 5px;
 

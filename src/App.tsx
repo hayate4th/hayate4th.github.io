@@ -1,12 +1,25 @@
 import React from "react";
 
-import MusicBlock from "./components/MusicBlock";
-import MusicColumn from "./components/MusicColumn";
+import { Props as ColumnProps } from "./components/MusicColumn";
+import MusicGraphics from "./components/MusicGraphics";
 
 const App = () => {
+  const createColumnProps = (columnLength: number): ColumnProps[] => {
+    const results = [];
+    const startColor = Math.floor(Math.random() * 20);
+
+    for (let i = 0; i < columnLength; i++) {
+      results.push({
+        length: Math.floor(Math.random() * 15) + 1,
+        color: 10 * (i + startColor),
+      });
+    }
+    return results;
+  };
+
   return (
     <>
-      <MusicColumn length={9} color="blue" />
+      <MusicGraphics columnProps={createColumnProps(20)} />
     </>
   );
 };
