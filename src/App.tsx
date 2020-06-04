@@ -10,6 +10,7 @@ const App = () => {
 
     for (let i = 0; i < columnLength; i++) {
       results.push({
+        id: i,
         length: Math.floor(Math.random() * 15) + 1,
         color: 10 * (i + startColor),
       });
@@ -17,11 +18,7 @@ const App = () => {
     return results;
   };
 
-  return (
-    <>
-      <MusicGraphics columnProps={createColumnProps(20)} />
-    </>
-  );
+  return <MusicGraphics columnProps={createColumnProps(20)} />;
 };
 
 export default App;

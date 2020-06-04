@@ -5,11 +5,10 @@ type MusicBlockProps = {
   color: number;
 };
 
-export const baseClass = "music-block";
 const MusicBlock: React.FC<MusicBlockProps> = ({ color }) => {
   return (
     <Block
-      className={`${baseClass}-${color}`}
+      className="animated-music-block"
       style={{ backgroundColor: `hsl(${color}, 100%, 50%)` }}
     />
   );
