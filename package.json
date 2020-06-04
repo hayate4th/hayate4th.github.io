@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/hayate4th/hayate4th.github.io#readme",
   "dependencies": {
+    "animejs": "3.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.1.1",
@@ -41,6 +42,7 @@
   },
   "devDependencies": {
     "@cybozu/eslint-config": "10.0.3",
+    "@types/animejs": "3.1.1",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
     "@types/styled-components": "5.1.0",
