@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/hayate4th/hayate4th.github.io#readme",
   "dependencies": {
+    "gh-pages": "3.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.1.1",
