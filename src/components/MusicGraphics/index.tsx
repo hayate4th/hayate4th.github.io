@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import anime from "animejs";
 
 import MusicColumn, { Props as ColumnProps } from "../MusicColumn";
 
@@ -8,8 +9,19 @@ type Props = {
 };
 
 const MusicGraphics: React.FC<Props> = ({ columnProps }) => {
+  useEffect(() => {
+    anime({
+      targets: ".animated-music-graphics",
+      scale: [0.85, 1.15],
+      duration: 250,
+      easing: "linear",
+      direction: "alternate",
+      loop: true,
+    });
+  }, []);
+
   return (
-    <FlexWrapper>
+    <FlexWrapper className="animated-music-graphics">
       {columnProps.map((columnProp, index) => (
         <MusicColumn key={index} {...columnProp} />
       ))}
