@@ -14,15 +14,6 @@ const MusicGraphics: React.FC<Props> = ({ columnProps }) => {
 
   useEffect(() => {
     anime({
-      targets: ".animated-music-graphics",
-      scale: [0.85, 1.15],
-      duration: 250,
-      easing: "linear",
-      direction: "alternate",
-      loop: true,
-    });
-
-    anime({
       targets: ".animated-title",
       rotate: [-20, 20],
       duration: 750,
