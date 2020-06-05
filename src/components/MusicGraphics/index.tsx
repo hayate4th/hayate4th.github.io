@@ -14,15 +14,6 @@ const MusicGraphics: React.FC<Props> = ({ columnProps }) => {
 
   useEffect(() => {
     anime({
-      targets: ".animated-music-graphics",
-      scale: [0.85, 1.15],
-      duration: 250,
-      easing: "linear",
-      direction: "alternate",
-      loop: true,
-    });
-
-    anime({
       targets: ".animated-title",
       rotate: [-20, 20],
       duration: 750,
@@ -113,7 +104,7 @@ const TitleButton = styled.button`
   border-radius: 5px;
   padding: 10px 50px;
   z-index: 9999;
-  top: 50%;
+  top: 45%;
 
   // TODO: Make the text color transparent
   &:hover {
