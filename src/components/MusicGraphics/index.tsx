@@ -104,7 +104,7 @@ const TitleButton = styled.button`
   border-radius: 5px;
   padding: 10px 50px;
   z-index: 9999;
-  top: 50%;
+  top: 45%;
 
   // TODO: Make the text color transparent
   &:hover {
