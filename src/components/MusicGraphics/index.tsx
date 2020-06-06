@@ -6,9 +6,13 @@ import MusicColumn, { Props as ColumnProps } from "../MusicColumn";
 
 type Props = {
   columnProps: ColumnProps[];
+  setAnimationHasFinished: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const MusicGraphics: React.FC<Props> = ({ columnProps }) => {
+const MusicGraphics: React.FC<Props> = ({
+  columnProps,
+  setAnimationHasFinished,
+}) => {
   const [isMouseOnButton, setIsMouseOnButton] = useState(false);
   const [isAnimationStopped, setIsAnimationStopped] = useState(false);
 
@@ -24,28 +28,32 @@ const MusicGraphics: React.FC<Props> = ({ columnProps }) => {
   }, []);
 
   useEffect(() => {
-    if (isAnimationStopped) {
-      anime.remove(".animated-music-block");
-      anime.remove(".animated-music-graphics");
+    (async () => {
+      if (isAnimationStopped) {
+        anime.remove(".animated-music-block");
+        anime.remove(".animated-music-graphics");
 
-      anime({
-        targets: ".animated-music-block",
-        translateX: anime.stagger(3000, {
-          grid: [20, 1],
-          from: "center",
-          axis: "x",
-        }),
-        translateY: anime.stagger(3000, {
-          grid: [20, 9],
-          from: "center",
-          axis: "y",
-        }),
-        scale: 5,
-        duration: 3000,
-        easing: "linear",
-      });
-    }
-  }, [isAnimationStopped]);
+        const promise = anime({
+          targets: ".animated-music-block",
+          translateX: anime.stagger(3000, {
+            grid: [20, 1],
+            from: "center",
+            axis: "x",
+          }),
+          translateY: anime.stagger(3000, {
+            grid: [20, 9],
+            from: "center",
+            axis: "y",
+          }),
+          scale: 5,
+          duration: 3000,
+          easing: "linear",
+        });
+        await promise.finished;
+        setAnimationHasFinished(true);
+      }
+    })();
+  }, [isAnimationStopped, setAnimationHasFinished]);
 
   const onMouseEnterHandler = () => setIsMouseOnButton(true);
 
@@ -92,13 +100,15 @@ const FlexWrapper = styled.div`
 `;
 
 const TitleButton = styled.button`
-  font-weight: bold;
-  background-color: transparent;
+  // Reset button style
   cursor: pointer;
   outline: none;
   appearance: none;
-  color: white;
+
   font-size: 80px;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
   position: absolute;
   border: 10px solid white;
   border-radius: 5px;
