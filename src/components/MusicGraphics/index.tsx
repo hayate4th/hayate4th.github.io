@@ -46,7 +46,7 @@ const MusicGraphics: React.FC<Props> = ({
             axis: "y",
           }),
           scale: 5,
-          duration: 3000,
+          duration: 1000,
           easing: "linear",
         });
         await promise.finished;
