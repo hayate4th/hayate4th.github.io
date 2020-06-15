@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --devtool cheap-module-source-map",
     "build": "webpack --mode production",
-    "lint-fix": "eslint --ext .ts,tsx src --fix",
+    "lint-fix": "eslint --ext .ts,tsx src types --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -37,6 +37,7 @@
     "animejs": "3.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0",
     "styled-components": "5.1.1",
     "webpack": "4.43.0"
   },
@@ -45,6 +46,7 @@
     "@types/animejs": "3.1.1",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@types/styled-components": "5.1.0",
     "eslint": "7.1.0",
     "husky": "4.2.5",
@@ -52,6 +54,7 @@
     "prettier": "2.0.5",
     "ts-loader": "7.0.5",
     "typescript": "3.9.3",
+    "url-loader": "4.1.0",
     "webpack-cli": "3.3.11",
     "webpack-dev-server": "3.11.0"
   }

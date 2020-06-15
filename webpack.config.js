@@ -14,6 +14,10 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: "ts-loader"
+      },
+      {
+        test: /\.(gif|jpg|png)$/,
+        use: "url-loader"
       }
     ]
   },
