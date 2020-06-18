@@ -129,7 +129,7 @@ const Navigation = styled.nav`
   align-self: center;
   max-width: 200px;
   width: 200px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
   padding: 0 15px;
   border-right: 3px solid #000;
 `;
