@@ -94,14 +94,14 @@ const MainPortfolio: React.FC = () => {
 };
 
 const Header = styled.header`
-  padding: 0 15px;
-  height: 80px;
+  padding: 0;
+  height: 65px;
   margin-bottom: 20px;
 `;
 
 const MainTitle = styled.div`
   display: flex;
-  padding: 15px 0;
+  padding: 0 0 15px;
   border-bottom: 3px solid #000;
 `;
 
@@ -129,8 +129,8 @@ const Navigation = styled.nav`
   align-self: center;
   max-width: 200px;
   width: 200px;
-  height: calc(100vh - 100px);
-  padding: 0 15px;
+  height: calc(100vh - 115px);
+  padding: 0 15px 0 0;
   border-right: 3px solid #000;
 `;
 
