@@ -4,8 +4,11 @@ import { Props as ColumnProps } from "./components/MusicColumn";
 import MusicGraphics from "./components/MusicGraphics";
 import MainPortfolio from "./components/MainPortfolio";
 
+const DEFAULT_MUSIC_COLUMNS = 20;
+
 const App = () => {
   const [animationHasFinished, setAnimationHasFinished] = useState(false);
+
   const createColumnProps = (columnLength: number): ColumnProps[] => {
     const results = [];
     const startColor = Math.floor(Math.random() * 20);
@@ -23,7 +26,7 @@ const App = () => {
     <>
       {!animationHasFinished ? (
         <MusicGraphics
-          columnProps={createColumnProps(20)}
+          columnProps={createColumnProps(DEFAULT_MUSIC_COLUMNS)}
           setAnimationHasFinished={setAnimationHasFinished}
         />
       ) : (
