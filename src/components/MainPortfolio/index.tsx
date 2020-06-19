@@ -94,31 +94,31 @@ const MainPortfolio: React.FC = () => {
 };
 
 const Header = styled.header`
-  padding: 0;
   height: 65px;
   margin-bottom: 20px;
+  padding: 0;
 `;
 
 const MainTitle = styled.div`
-  display: flex;
-  padding: 0 0 15px;
   border-bottom: 3px solid #000;
+  display: flex;
+  padding-bottom: 15px;
 `;
 
 const LogoImage = styled.img`
   border-radius: 50%;
-  width: 50px;
   height: 50px;
   margin-right: 10px;
   opacity: 0;
+  width: 50px;
 `;
 
 const TitleText = styled.h1`
-  font-size: 1.5rem;
-  margin: 0 10px 0 0;
-  color: #000;
-  vertical-align: middle;
   align-self: center;
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
 `;
 
 const FlexWrapper = styled.div`
@@ -127,11 +127,11 @@ const FlexWrapper = styled.div`
 
 const Navigation = styled.nav`
   align-self: center;
-  max-width: 200px;
-  width: 200px;
-  height: calc(100vh - 115px);
-  padding: 0 15px 0 0;
   border-right: 3px solid #000;
+  height: calc(100vh - 115px);
+  max-width: 200px;
+  padding: 0 15px 0 0;
+  width: 200px;
 `;
 
 const Menu = styled.ul`
@@ -142,8 +142,8 @@ const Menu = styled.ul`
 `;
 
 const MenuItem = styled.li`
-  text-align: center;
   margin-bottom: 10px;
+  text-align: center;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -151,13 +151,13 @@ const MenuItem = styled.li`
 `;
 
 const StyledNavLink = styled(NavLink)`
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
   border-bottom: 3px solid transparent;
+  color: #000;
+  display: inline-block;
+  font-weight: bold;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
 `;
 
 export default MainPortfolio;
