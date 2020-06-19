@@ -100,21 +100,19 @@ const FlexWrapper = styled.div`
 `;
 
 const TitleButton = styled.button`
-  // Reset button style
-  cursor: pointer;
-  outline: none;
   appearance: none;
-
-  font-size: 80px;
-  color: white;
-  font-weight: bold;
   background-color: transparent;
-  position: absolute;
-  border: 10px solid white;
+  border: 10px solid #fff;
   border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 5rem;
+  font-weight: bold;
+  outline: none;
   padding: 10px 50px;
-  z-index: 9999;
+  position: absolute;
   top: 45%;
+  z-index: 9999;
 
   // TODO: Make the text color transparent
   &:hover {
