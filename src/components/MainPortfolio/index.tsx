@@ -102,7 +102,7 @@ const Header = styled.header`
 const MainTitle = styled.div`
   border-bottom: 3px solid #000;
   display: flex;
-  padding-bottom: 15px;
+  padding: 0 0 15px 0;
 `;
 
 const LogoImage = styled.img`
@@ -117,7 +117,7 @@ const TitleText = styled.h1`
   align-self: center;
   color: #000;
   font-size: 1.5rem;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
   vertical-align: middle;
 `;
 
