@@ -45,16 +45,17 @@ const NavigationMenu: React.FC = () => {
         </Navigation>
         <Switch>
           <Route exact path="/">
-            <div style={{ color: "#000", padding: "20px" }}>Home</div>
+            <PageWrapper>Home</PageWrapper>
           </Route>
           <Route path="/about">
-            <div style={{ color: "#000", padding: "20px" }}>About</div>
+            <PageWrapper>About</PageWrapper>
           </Route>
           <Route path="/works">
-            <div style={{ color: "#000", padding: "20px" }}>Works</div>
+            <PageWrapper>
+            </PageWrapper>
           </Route>
           <Route path="/blog">
-            <div style={{ color: "#000", padding: "20px" }}>Blogs</div>
+            <PageWrapper>Blogs</PageWrapper>
           </Route>
         </Switch>
       </FlexWrapper>
@@ -99,6 +100,12 @@ const StyledNavLink = styled(NavLink)`
   height: 100%;
   text-decoration: none;
   width: 100%;
+`;
+
+const PageWrapper = styled.div`
+  color: #000;
+  padding: 20px;
+  flex-grow: 1;
 `;
 
 export default NavigationMenu;
