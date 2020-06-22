@@ -1,13 +1,21 @@
 import React from "react";
+import styled from "styled-components";
+
 import WorkCard from "../WorkCard";
 
 const WorksPage: React.FC = () => {
   return (
     <>
-      <h2>Works</h2>
+      <PageTitle>Works</PageTitle>
       <WorkCard />
     </>
   );
 };
+
+const PageTitle = styled.h2`
+  font-size: 2rem;
+  margin-top: 0;
+  text-align: center;
+`;
 
 export default WorksPage;
