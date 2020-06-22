@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+import WorksPage from "../WorksPage";
+
 const NavigationMenu: React.FC = () => {
   return (
     <BrowserRouter>
@@ -52,6 +54,7 @@ const NavigationMenu: React.FC = () => {
           </Route>
           <Route path="/works">
             <PageWrapper>
+              <WorksPage />
             </PageWrapper>
           </Route>
           <Route path="/blog">
